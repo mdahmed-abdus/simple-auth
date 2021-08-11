@@ -1,4 +1,6 @@
 const BCRYPT_WORK_FACTOR = 12;
 const BCRYPT_MAX_BYTES = 72;
+const DUMMY_HASH =
+  '$2b$12$mtCtYBxEn6CjufY1jRgL6eJMxsq.ua2.PRBDB.WBQhgd4GIkLF9.i';
 
-module.exports = { BCRYPT_WORK_FACTOR, BCRYPT_MAX_BYTES };
+module.exports = { BCRYPT_WORK_FACTOR, BCRYPT_MAX_BYTES, DUMMY_HASH };

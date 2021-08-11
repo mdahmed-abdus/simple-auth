@@ -8,9 +8,8 @@ const { SESSION_OPTIONS } = require('../config/session');
 const { STORE_OPTIONS } = require('../config/store');
 const home = require('../routes/home');
 const users = require('../routes/users');
-const error = require('../middleware/error');
 
-module.exports = (app) => {
+module.exports = app => {
   // middleware
   app.use(helmet());
   app.use(json());
@@ -33,5 +32,8 @@ module.exports = (app) => {
   app.use((req, res) => res.status(404).render('404'));
 
   // error middleware
-  app.use(error);
+  app.use((err, req, res, next) => {
+    console.log(err);
+    res.status(500).send('Internal server error');
+  });
 };

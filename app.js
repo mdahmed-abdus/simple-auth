@@ -1,4 +1,4 @@
-require('dotenv').config({ path: './config' });
+require('dotenv').config({ path: './config/.env' });
 const { APP_PORT } = require('./config/app');
 const express = require('express');
 
