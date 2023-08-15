@@ -1,3 +1,4 @@
+const express = require('express');
 const { json, urlencoded } = require('express');
 const helmet = require('helmet');
 const mongoSanitize = require('express-mongo-sanitize');
@@ -19,6 +20,9 @@ module.exports = app => {
   );
   app.use(mongoSanitize());
   app.use(xss());
+
+  // static files
+  app.use(express.static('./public'));
 
   // view engine
   app.set('views', './views');
