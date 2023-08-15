@@ -1,24 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Profile - simple-auth</title>
-</head>
-
-<body>
-	<h1>User Profile</h1>
-	<h5>Id</h5>
-	<p><%= user._id %></p>
-	<h5>Name</h5>
-	<p><%= user.name %></p>
-	<h5>Email</h5>
-	<p><%= user.email %></p>
-
-	<form action="/users/logout" method="post">
-		<input type="submit" value="Logout">
-	</form>
-</body>
-
+  <%- include('partials/head.ejs') %>
+  <body>
+    <h1>User Profile</h1>
+    <h5>Id</h5>
+    <p><%= user._id %></p>
+    <h5>Name</h5>
+    <p><%= user.name %></p>
+    <h5>Email</h5>
+    <p><%= user.email %></p>
+    <form action="/users/logout" method="post">
+      <input type="submit" value="Logout" />
+    </form>
+    <%- include('partials/footer.ejs') %>
+  </body>
 </html>

@@ -1,21 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Home - simple-auth</title>
-	<link href="/css/style.css" rel="stylesheet" type="text/css" />
-</head>
-
-<body>
-	<% if (typeof message != "undefined" ? message : "") { %>
-	<h2><%= message %></h2>
-	<% } %>
-
-	<h1>This is an example of simple user auth</h1>
-	<a href="/users/login">Login</a>
-	<a href="/users/register">Register</a>
-</body>
-
+  <%- include('partials/head.ejs') %>
+  <body>
+    <% if (typeof message != "undefined" ? message : "") { %>
+    <h2><%= message %></h2>
+    <% } %>
+    <h1>This is an example of simple user auth</h1>
+    <a href="/users/login">Login</a>
+    <a href="/users/register">Register</a>
+    <%- include('partials/footer.ejs') %>
+  </body>
 </html>

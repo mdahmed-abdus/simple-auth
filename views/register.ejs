@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Register - simple-auth</title>
-</head>
-
-<body>
-	<% if (typeof message != "undefined" ? message : "") { %>
-	<h2><%= message %></h2>
-	<% } %>
-
-	<h1>Register</h1>
-	<form action="/users/register" method="post">
-		<input type="name" name="name" placeholder="Name" required />
-		<input type="email" name="email" placeholder="Email" required />
-		<input type="password" name="password" placeholder="Password" required />
-		<input type="password" name="confirmPassword" placeholder="Enter password again" required />
-		<input type="submit">
-	</form>
-	<a href="/">Home</a>
-	<a href="/users/login">Login</a>
-</body>
-
+  <%- include('partials/head.ejs') %>
+  <body>
+    <% if (typeof message != "undefined" ? message : "") { %>
+    <h2><%= message %></h2>
+    <% } %>
+    <h1>Register</h1>
+    <form action="/users/register" method="post">
+      <input type="name" name="name" placeholder="Name" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <input type="password" name="password" placeholder="Password" required />
+      <input
+        type="password"
+        name="confirmPassword"
+        placeholder="Enter password again"
+        required
+      />
+      <input type="submit" />
+    </form>
+    <a href="/">Home</a>
+    <a href="/users/login">Login</a>
+    <%- include('partials/footer.ejs') %>
+  </body>
 </html>
