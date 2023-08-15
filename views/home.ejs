@@ -2,12 +2,21 @@
 <html lang="en">
   <%- include('partials/head.ejs') %>
   <body>
-    <% if (typeof message != "undefined" ? message : "") { %>
-    <h2><%= message %></h2>
-    <% } %>
-    <h1>This is an example of simple user auth</h1>
-    <a href="/users/login">Login</a>
-    <a href="/users/register">Register</a>
+    <div class="grid-main-container">
+      <div class="grid-container">
+        <h1>simple-auth</h1>
+        <p class="tagline">
+          A simple session based authentication and authorization using Node.js.
+        </p>
+        <div class="buttons">
+          <a class="button mr-10" href="/users/login">Login</a>
+          <a class="button" href="/users/register">Register</a>
+        </div>
+        <% if (typeof message != "undefined" ? message : "") { %>
+        <p class="error"><%= message %></p>
+        <% } %>
+      </div>
+    </div>
     <%- include('partials/footer.ejs') %>
   </body>
 </html>

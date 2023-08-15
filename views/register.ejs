@@ -2,24 +2,43 @@
 <html lang="en">
   <%- include('partials/head.ejs') %>
   <body>
-    <% if (typeof message != "undefined" ? message : "") { %>
-    <h2><%= message %></h2>
-    <% } %>
-    <h1>Register</h1>
-    <form action="/users/register" method="post">
-      <input type="name" name="name" placeholder="Name" required />
-      <input type="email" name="email" placeholder="Email" required />
-      <input type="password" name="password" placeholder="Password" required />
-      <input
-        type="password"
-        name="confirmPassword"
-        placeholder="Enter password again"
-        required
-      />
-      <input type="submit" />
-    </form>
-    <a href="/">Home</a>
-    <a href="/users/login">Login</a>
+    <div class="grid-main-container">
+      <div class="grid-container">
+        <h1>Register</h1>
+        <form action="/users/register" method="post">
+          <input type="name" name="name" placeholder="Name" required />
+          <input
+            class="mt-16"
+            type="email"
+            name="email"
+            placeholder="Email"
+            required
+          />
+          <input
+            class="mt-16"
+            type="password"
+            name="password"
+            placeholder="Password"
+            required
+          />
+          <input
+            class="mt-16"
+            type="password"
+            name="confirmPassword"
+            placeholder="Enter password again"
+            required
+          />
+          <input class="mt-16 button" type="submit" />
+        </form>
+        <div class="buttons">
+          <a class="button mr-10" href="/">Home</a>
+          <a class="button" href="/users/login">Login</a>
+        </div>
+        <% if (typeof message != "undefined" ? message : "") { %>
+        <p class="error"><%= message %></p>
+        <% } %>
+      </div>
+    </div>
     <%- include('partials/footer.ejs') %>
   </body>
 </html>

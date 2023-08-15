@@ -2,10 +2,16 @@
 <html lang="en">
   <%- include('partials/head.ejs') %>
   <body>
-    <h1>Invalid route</h1>
-    <a href="/">Home</a>
-    <a href="/users/login">Login</a>
-    <a href="/users/register">Register</a>
+    <div class="grid-main-container">
+      <div class="grid-container">
+        <h1>Invalid route</h1>
+        <div class="buttons">
+          <a class="button mr-10" href="/">Home</a>
+          <a class="button mr-10" href="/users/login">Login</a>
+          <a class="button" href="/users/register">Register</a>
+        </div>
+      </div>
+    </div>
     <%- include('partials/footer.ejs') %>
   </body>
 </html>

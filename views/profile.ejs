@@ -2,16 +2,23 @@
 <html lang="en">
   <%- include('partials/head.ejs') %>
   <body>
-    <h1>User Profile</h1>
-    <h5>Id</h5>
-    <p><%= user._id %></p>
-    <h5>Name</h5>
-    <p><%= user.name %></p>
-    <h5>Email</h5>
-    <p><%= user.email %></p>
-    <form action="/users/logout" method="post">
-      <input type="submit" value="Logout" />
-    </form>
+    <div class="grid-main-container">
+      <div class="grid-container">
+        <h1>User Profile</h1>
+        <p class="tagline">You are logged in. Below are your details.</p>
+        <div>
+          <h5>Id</h5>
+          <p><%= user._id %></p>
+          <h5>Name</h5>
+          <p><%= user.name %></p>
+          <h5>Email</h5>
+          <p><%= user.email %></p>
+          <form action="/users/logout" method="post">
+            <input class="button" type="submit" value="Logout" />
+          </form>
+        </div>
+      </div>
+    </div>
     <%- include('partials/footer.ejs') %>
   </body>
 </html>
