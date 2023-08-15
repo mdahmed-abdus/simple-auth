@@ -4,7 +4,8 @@
   "description": "A simple session based authentication in express",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon app"
+    "dev": "nodemon app",
+    "start": "node app"
   },
   "author": "Mohd Ahmed",
   "license": "ISC",
