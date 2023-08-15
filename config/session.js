@@ -12,6 +12,7 @@ const SESSION_ABSOLUTE_TIMEOUT = +(env.SESSION_ABSOLUTE_TIMEOUT || ONE_DAY);
 const SESSION_OPTIONS = {
   secret: SESSION_SECRET,
   name: SESSION_NAME,
+  proxy: true,
   cookie: {
     maxAge: SESSION_IDLE_TIMEOUT,
     secure: IN_PROD,
